@@ -4,9 +4,7 @@ import pandas as pd
 from pydantic import BaseModel
 import tensorflow as tf
 import warnings
-from sklearn.exceptions import InconsistentVersionWarning
 
-warnings.filterwarnings('ignore', category=InconsistentVersionWarning)
 
 app = FastAPI()
 
