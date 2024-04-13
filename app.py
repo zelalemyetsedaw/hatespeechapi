@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 from pydantic import BaseModel
 import tensorflow as tf
-import warnings
+
 
 
 app = FastAPI()
