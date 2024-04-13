@@ -24,6 +24,10 @@ loaded_model = tf.keras.models.model_from_json(loaded_model_json)
 # Load the model weights
 loaded_model.load_weights('model_weights.weights.h5')
 
+@app.get("/")
+async def read_root():
+    return {"Hello": "World"}
+    
 @app.post('/')
 async def scoring_endpoint(data:hatespeech):
     input_sequence = tokenizer.texts_to_sequences([data.input_string])
