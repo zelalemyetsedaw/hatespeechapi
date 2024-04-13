@@ -38,5 +38,4 @@ async def scoring_endpoint(data:hatespeech):
     predicted_label = loaded_le.inverse_transform(predictions.argmax(axis=1))
 
     return {"predicted_label": predicted_label[0]}
-if __name__ == "__main__":
-    run(app, host="0.0.0.0", port=8000)
+
