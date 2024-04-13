@@ -25,6 +25,7 @@ loaded_model = tf.keras.models.model_from_json(loaded_model_json)
 loaded_model.load_weights('model_weights.weights.h5')
 
 @app.get("/")
+@app.head("/") 
 async def read_root():
     return {"Hello": "World"}
     
